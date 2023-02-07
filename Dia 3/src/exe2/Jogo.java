@@ -3,7 +3,11 @@ package exe2;
 public class Jogo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		
+		Carteador carteador = new Carteador();
+		
+		carteador.embaralhar();
 
 	}
 
