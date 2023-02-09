@@ -7,7 +7,7 @@ public class Jogo {
 		
 		Carteador carteador = new Carteador();
 		
-		carteador.embaralhar();
+		System.out.println(carteador.embaralhar());
 
 	}
 

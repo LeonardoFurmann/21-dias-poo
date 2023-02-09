@@ -6,6 +6,38 @@ public class Carta {
 	private int valor;
 	//private String estado;
 	
+	public Carta(String naipe, int valor) {
+		super();
+		this.naipe = naipe;
+		this.valor = valor;
+		//this.estado = estado;
+	}
+	
+	public Carta() {
+		
+	}
+	
+
+	public String Escrever(int valor) {	
+		
+		switch (valor) {
+		case 11:
+			return naipe + " " + "Valete" + "\n";
+		case 12:
+			return naipe + " " + "Dama" + "\n";
+		case 13:
+			return naipe + " " + "Rei" + "\n";
+		case 14:
+			return naipe + " " + "Ás" + "\n";
+		default:
+			break;
+		}
+		
+		
+		
+			return naipe + " " + valor + "\n";
+	}
+	
 	
 	public String getNaipe() {
 		return naipe;
@@ -26,19 +58,6 @@ public class Carta {
 //	public void setEstado(String estado) {
 //		this.estado = estado;
 //	}
-	
-	
-	public Carta(String naipe, int valor) {
-		super();
-		this.naipe = naipe;
-		this.valor = valor;
-		//this.estado = estado;
-	}
-	
-	public Carta() {
-		
-	}
-	
 		
 
 }

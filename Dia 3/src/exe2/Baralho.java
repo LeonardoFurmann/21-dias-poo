@@ -1,34 +1,35 @@
 package exe2;
 
-
-import java.util.List;
+import java.util.ArrayList;
 
 public class Baralho {
 	
-	public List<Carta> Maço;
+	
+	ArrayList<Carta> Maço = new ArrayList<>();
 	
 		
  public void adicionar() {
 		
-		Carta carta = new Carta();
-		
-		
-	for (int i = 0; i < 52; i++) {
-		for (int j = 2; j <= 14; j++) {
+			
+	for (int i = 0; i < 4; i++) {
+		for (int j = 2; j <= 14;j++) {
+			
+			Carta carta = new Carta();
 			
 			carta.setValor(j);
 			
-			if(i < 13) {
+			if(i == 0) {
 			carta.setNaipe("Ouro");
-			}else if (i >= 13 && i < 26){
+			}else if (i == 1){
 				carta.setNaipe("Copas");
-			}else if (i >= 26 && i < 39){
+			}else if (i == 2){
 				carta.setNaipe("Espadas");
-			}else if (i >= 26 && i < 51){
+			}else if (i == 3){
 				carta.setNaipe("Paus");
 			}
 			
 			Maço.add(carta);
+			
 			
 		}
 	}
