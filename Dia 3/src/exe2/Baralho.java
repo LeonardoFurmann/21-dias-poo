@@ -4,11 +4,14 @@ import java.util.ArrayList;
 
 public class Baralho {
 	
+	private ArrayList<Carta> Maço = new ArrayList<>();
 	
-	ArrayList<Carta> Maço = new ArrayList<>();
-	
+	public Baralho() {
+		adicionarCartas();
+	}
+
 		
- public void adicionar() {
+	public void adicionarCartas() {
 		
 			
 	for (int i = 0; i < 4; i++) {
@@ -37,4 +40,12 @@ public class Baralho {
 	
 		
 	}
+ 
+ 	public int size() {
+		return Maço.size();
+
+ }
+ 
+ 
+ 
 }

@@ -4,13 +4,11 @@ public class Carta {
 	
 	private String naipe;
 	private int valor;
-	//private String estado;
+	private int id;
 	
 	public Carta(String naipe, int valor) {
-		super();
 		this.naipe = naipe;
 		this.valor = valor;
-		//this.estado = estado;
 	}
 	
 	public Carta() {
@@ -33,8 +31,6 @@ public class Carta {
 			break;
 		}
 		
-		
-		
 			return naipe + " " + valor + "\n";
 	}
 	
@@ -52,12 +48,7 @@ public class Carta {
 		this.valor = valor;
 	}
 	
-//	public String getEstado() {
-//		return estado;
-//	}
-//	public void setEstado(String estado) {
-//		this.estado = estado;
-//	}
+
 		
 
 }
