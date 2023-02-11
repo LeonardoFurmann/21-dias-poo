@@ -4,10 +4,16 @@ public class Jogo {
 
 	public static void main(String[] args) {
 		
+		Baralho baralho = new Baralho();
 		
-		Carteador carteador = new Carteador();
+	//System.out.print(baralho.escreverBaralho() + "\n\n");
 		
-		System.out.println(carteador.embaralhar());
+		Carteador carteador = new Carteador(baralho);
+		
+		carteador.embaralhar();
+		
+		
+		System.out.print(baralho.escreverBaralho());
 
 	}
 

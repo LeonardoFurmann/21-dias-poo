@@ -18,6 +18,7 @@ public class Carta {
 
 	public String Escrever(int valor) {	
 		
+		
 		switch (valor) {
 		case 11:
 			return naipe + " " + "Valete" + "\n";
@@ -47,14 +48,17 @@ public class Carta {
 	public void setValor(int valor) {
 		this.valor = valor;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 	
 
 		
 
 }
 
-
-
-//= {"ouro", "copas", "espadas", "paus"};
-//= {1,2,3,4,5,6,7,8,9,10,11,12,13,14};
-//= {"paraBaixo", "paraCima
