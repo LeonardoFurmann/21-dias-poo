@@ -1,7 +1,6 @@
 
 public class Teste {
 
-	@SuppressWarnings("null")
 	public static void main(String[] args) {
 		
 		Livro livro = new Livro();
