@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Baralho {
 	
-	int id = 1;
+	//int id = 1;
 	
 	private ArrayList<Carta> Maço = new ArrayList<>();
 	
@@ -22,7 +22,7 @@ public class Baralho {
 			Carta carta = new Carta();
 				
 			
-			carta.setId(id);
+			//carta.setId(id);
 			carta.setValor(j);
 			
 			if(i == 0) {
@@ -36,7 +36,7 @@ public class Baralho {
 			}
 			
 			Maço.add(carta);
-			id++;
+			//id++;
 			
 			
 			}
