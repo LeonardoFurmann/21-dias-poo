@@ -60,7 +60,7 @@ public class Baralho {
 	
 	public Carta pegarCarta(int indice) {
 		if(indice < Maço.size()) {
-			return (Carta) Maço.get(indice); 
+			return (Carta) Maço.get(indice);  // retorna a carta com o indice qeu foi dado
 		}
 		return null;
 	}
@@ -74,8 +74,8 @@ public class Baralho {
 
 
 	public void trocar(int indice, Carta carta) {
-		Maço.set(indice, carta);
-	}
+		Maço.set(indice, carta);                    // coloca a carta no indice
+	} 
  
  
  

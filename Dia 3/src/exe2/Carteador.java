@@ -19,7 +19,7 @@ public class Carteador {
 			
 			int indice = (int) (Math.random() * numeroCartas);
 			
-			Carta carta_i = (Carta) baralho.pegarCarta(i);
+			Carta carta_i =  (Carta) baralho.pegarCarta(i);
 			Carta carta_indice = (Carta) baralho.pegarCarta(indice);
 			
 			baralho.trocar(i, carta_indice);
