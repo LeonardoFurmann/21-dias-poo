@@ -9,6 +9,7 @@ public class SadObject extends MoodyObject{
 		return "Sad";
 	}
 	
+	//especialização
 	public void cry() {
 		System.out.println("boo hoo");
 	}
