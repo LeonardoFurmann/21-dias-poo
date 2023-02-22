@@ -25,11 +25,12 @@ public class ContaPoupança extends Conta{
 
 	public void adicionarJuros() {
 		
-		double valor = 0;
+		double saldo = getSaldo();
+		double juros = getJuros();
 		
-		valor += getSaldo() * juros;
+		double novoSaldo = saldo + (saldo * juros);
 		
-		setSaldo(valor); 
+		setSaldo(novoSaldo); 
 		
 	}
 

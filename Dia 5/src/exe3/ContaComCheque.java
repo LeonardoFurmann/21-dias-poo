@@ -2,15 +2,15 @@ package exe3;
 
 public class ContaComCheque extends Conta{
 		
-	private int taxaPorTransação;
+	private double taxaPorTransação;
 	private int limiteTransações;
 	private int totalTransações = 0;
 	
 	
-	public ContaComCheque(int limiteTransações, int taxa, double saldoInicial) {
+	public ContaComCheque(int limiteTransações, double taxa, double saldoInicial) {
 		super(saldoInicial);
-		this.limiteTransações = limiteTransações;
-		this.taxaPorTransação = taxa;
+		setLimiteTransações(limiteTransações);
+		setTaxaPorTransação(taxa);
 	}
 	
 	
@@ -26,12 +26,12 @@ public class ContaComCheque extends Conta{
 	}
 
 
-	public int getTaxaPorTransação() {
+	public double getTaxaPorTransação() {
 		return taxaPorTransação;
 	}
 
 	
-	public void setTaxaPorTransação(int taxaPorTransação) {
+	public void setTaxaPorTransação(double taxaPorTransação) {
 		this.taxaPorTransação = taxaPorTransação;
 	}
 
@@ -50,14 +50,18 @@ public class ContaComCheque extends Conta{
 	
 	public void calculaTaxa() {
 		
-		double taxa = (totalTransações - limiteTransações) * taxaPorTransação;
+		int diferençaTransações = totalTransações - getLimiteTransações();
 		
 		
-		if (taxa >  0) {
+		if (diferençaTransações >  0) {
 			
-			setSaldo(getSaldo() - taxa);
+			double taxaTotal = diferençaTransações * getTaxaPorTransação();
+			double saldo = getSaldo() - taxaTotal;
+			setSaldo(saldo);
 			
 		}
+		
+		totalTransações = 0;
 		
 	}
 	

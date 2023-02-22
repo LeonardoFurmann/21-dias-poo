@@ -34,9 +34,9 @@ public class ContaComChequeEspecial extends Conta{
 	
 	public void aplicarJuros() {
 		
-		if (getSaldo() < 0) {
-			
-			double valor = getSaldo();
+		double valor = getSaldo();
+
+		if (getSaldo() < 0) {	
 			
 			valor += getSaldo() * juros;
 			

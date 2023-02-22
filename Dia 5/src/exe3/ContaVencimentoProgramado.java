@@ -3,27 +3,27 @@ package exe3;
 public class ContaVencimentoProgramado extends ContaPoupança {
 	
 	
-	private boolean prazoVencido; 
+	private boolean prazo; 
 	private double multa;
 	
 	
 	
-	public ContaVencimentoProgramado(double multa, boolean prazo, double juros, double saldoInicial) {
+	public ContaVencimentoProgramado(double multa, double juros, double saldoInicial) {
 		super(juros, saldoInicial);
 		
 		setMulta(multa);
-		setPrazo(prazo);
+	
 		
 	}
 
 	
 	
-	public boolean prazo() {
-		return prazoVencido;
+	public boolean isPrazoVencido() {
+		return prazo;
 	}
 	
-	public void setPrazo(boolean prazo) {
-		this.prazoVencido = prazo;
+	public void vencerPrazo() {
+		this.prazo = true;
 	}
 
 
@@ -45,7 +45,7 @@ public class ContaVencimentoProgramado extends ContaPoupança {
 		double saque = super.sacarFundos(fundos);
 		
 		
-		if(prazoVencido) {
+		if(isPrazoVencido()) {
 			
 			return saque - (saque * getMulta());
 		} else {
