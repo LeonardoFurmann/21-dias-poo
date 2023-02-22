@@ -4,6 +4,7 @@ public class ContaPoupança extends Conta{
 	
 	private double juros;
 		
+	// conta inicial
 	public ContaPoupança(double juros, double saldoInicial) {
 		super(saldoInicial);
 		setJuros(juros);
@@ -21,8 +22,6 @@ public class ContaPoupança extends Conta{
 
 
 	// aplica juros ao saldo da conta
-
-
 	public void adicionarJuros() {
 		
 		double saldo = getSaldo();

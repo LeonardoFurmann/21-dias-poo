@@ -4,6 +4,7 @@ public class ContaComChequeEspecial extends Conta{
 	
 	private double juros;
 	
+	// conta inicial 
 	public ContaComChequeEspecial(double juros, double saldoInicial) {
 		super(saldoInicial);
 		this.juros = juros;
@@ -19,7 +20,7 @@ public class ContaComChequeEspecial extends Conta{
 	}
 
 	
-	
+	// sobrepoe o método da superclasse para permitir o saldo negativo
 	@Override
 	public double sacarFundos(double fundos) {
 			
@@ -30,7 +31,7 @@ public class ContaComChequeEspecial extends Conta{
 	}
 	
 	
-	
+	// aplicar juros se o saldo for negativo
 	
 	public void aplicarJuros() {
 		

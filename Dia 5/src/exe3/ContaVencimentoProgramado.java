@@ -7,13 +7,11 @@ public class ContaVencimentoProgramado extends ContaPoupança {
 	private double multa;
 	
 	
-	
+	// conta inicial
 	public ContaVencimentoProgramado(double multa, double juros, double saldoInicial) {
 		super(juros, saldoInicial);
 		
-		setMulta(multa);
-	
-		
+		setMulta(multa);	
 	}
 
 	
@@ -22,6 +20,8 @@ public class ContaVencimentoProgramado extends ContaPoupança {
 		return prazo;
 	}
 	
+	
+	// vence o prazo
 	public void vencerPrazo() {
 		this.prazo = true;
 	}
@@ -38,6 +38,7 @@ public class ContaVencimentoProgramado extends ContaPoupança {
 	}
 
 
+	// após sacar fundos pela superclasse verifica se o prazo está vencido e aplica multa
 	@Override
 	public double sacarFundos(double fundos ) {
 		
@@ -52,10 +53,8 @@ public class ContaVencimentoProgramado extends ContaPoupança {
 			
 			return saque;
 		}
-		
-		
+			
 	}
-	
 	
 
 }

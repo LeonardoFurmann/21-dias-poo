@@ -6,7 +6,7 @@ public class ContaComCheque extends Conta{
 	private int limiteTransações;
 	private int totalTransações = 0;
 	
-	
+	// conta inicial
 	public ContaComCheque(int limiteTransações, double taxa, double saldoInicial) {
 		super(saldoInicial);
 		setLimiteTransações(limiteTransações);
@@ -36,7 +36,7 @@ public class ContaComCheque extends Conta{
 	}
 
 
-
+	// conta as transações de saque
 	@Override
 	public double sacarFundos(double fundos) {
 		
@@ -47,7 +47,7 @@ public class ContaComCheque extends Conta{
 	
 	
 	
-	
+	// verifica se o numero de transações ultrapassa o limite e aplica taxa
 	public void calculaTaxa() {
 		
 		int diferençaTransações = totalTransações - getLimiteTransações();
