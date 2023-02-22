@@ -2,10 +2,15 @@ package exe3;
 
 public class ContaComChequeEspecial extends Conta{
 	
-	private int juros;
+	private double juros;
+	
+	public ContaComChequeEspecial(double juros, double saldoInicial) {
+		super(saldoInicial);
+		this.juros = juros;
+	}
 	
 	
-	public int getJuros() {
+	public double getJuros() {
 		return juros;
 	}
 
@@ -13,10 +18,7 @@ public class ContaComChequeEspecial extends Conta{
 		this.juros = juros;
 	}
 
-	public ContaComChequeEspecial(int juros) {
-		super();
-		this.juros = juros;
-	}
+	
 	
 	@Override
 	public double sacarFundos(double fundos) {
@@ -34,11 +36,13 @@ public class ContaComChequeEspecial extends Conta{
 		
 		if (getSaldo() < 0) {
 			
-			double valor = 0;
+			double valor = getSaldo();
 			
 			valor += getSaldo() * juros;
 			
 			setSaldo(valor); 
+			
+			System.out.println("Juro deduzido do saldo");
 					
 		}else {
 			System.out.println("O saldo da conta é positivo");

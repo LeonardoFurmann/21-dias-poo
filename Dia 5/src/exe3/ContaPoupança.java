@@ -2,20 +2,20 @@ package exe3;
 
 public class ContaPoupança extends Conta{
 	
-	private int juros;
+	private double juros;
 		
-	public ContaPoupança(int juros, double saldoInicial) {
+	public ContaPoupança(double juros, double saldoInicial) {
 		super(saldoInicial);
-		setJuros(juros/100);
+		setJuros(juros);
 	}
 	
 
-	public int getJuros() {
+	public double getJuros() {
 		return juros;
 	}
 
 
-	public void setJuros(int juros) {
+	public void setJuros(double juros) {
 		this.juros = juros;
 	}
 

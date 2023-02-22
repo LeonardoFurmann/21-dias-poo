@@ -7,10 +7,10 @@ public class ContaComCheque extends Conta{
 	private int totalTransações = 0;
 	
 	
-	public ContaComCheque(int limiteTransações, int taxa) {
-		super();
+	public ContaComCheque(int limiteTransações, int taxa, double saldoInicial) {
+		super(saldoInicial);
 		this.limiteTransações = limiteTransações;
-		this.taxaPorTransação = taxa/100;
+		this.taxaPorTransação = taxa;
 	}
 	
 	
@@ -37,7 +37,6 @@ public class ContaComCheque extends Conta{
 
 
 
-
 	@Override
 	public double sacarFundos(double fundos) {
 		
@@ -56,7 +55,7 @@ public class ContaComCheque extends Conta{
 		
 		if (taxa >  0) {
 			
-			setSaldo(getSaldo() + taxa);
+			setSaldo(getSaldo() - taxa);
 			
 		}
 		
