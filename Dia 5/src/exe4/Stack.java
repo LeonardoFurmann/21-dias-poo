@@ -3,7 +3,8 @@ package exe4;
 import java.util.ArrayList;
 //import java.util.Vector;
 
-public class Stack {
+public class Stack implements IStack{
+	
 	
 	private ArrayList<Object> lista; 
 	
