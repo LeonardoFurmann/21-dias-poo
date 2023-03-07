@@ -4,16 +4,20 @@ public class BancoTeste {
 
 	public static void main(String[] args) {
 		
+		Banco banco = new Banco();
 		
 		System.out.println(" \n \\\\\\\\\\\\\\\\  Poupança \\\\\\\\\\\\  \n"  );
 		
 		ContaPoupança conta1 = new ContaPoupança(0.05, 700);
 		
-		System.out.println("Saldo na conta: " + conta1.verificarSaldo());
+		banco.addConta("Conta1", conta1 );
+		
+		System.out.println("Saldo na conta: " + banco.saldo("Conta1"));
 		
 		conta1.adicionarJuros();
 		
-		System.out.println("Saldo com juros adicionados na conta: " +conta1.verificarSaldo());
+		System.out.println("Saldo com juros adicionados na conta: " + banco.saldo("Conta1"));
+		System.out.println("Saldo com juros adicionados na conta: " + conta1.getSaldo());
 		
 		
 		
@@ -21,17 +25,19 @@ public class BancoTeste {
 		
 		ContaVencimentoProgramado conta2 = new ContaVencimentoProgramado(0.05, 0.05, 1000);
 		
+		banco.addConta("Conta2", conta2);
+		
 		System.out.println("Multa: " + conta2.getMulta());
 		
 		System.out.println("Saque: " + conta2.sacarFundos(500));
 		
-		System.out.println("Saldo na conta: " + conta2.verificarSaldo());
+		System.out.println("Saldo na conta: " + banco.saldo("Conta2"));
 		
 		conta2.vencerPrazo();
 		
 		System.out.println("Saque com multa pelo prazo vencido :" + conta2.sacarFundos(200));
 		
-		System.out.println("Saldo na conta: " + conta2.verificarSaldo());
+		System.out.println("Saldo na conta: " + banco.saldo("Conta2"));
 		
 		
 		
@@ -64,6 +70,12 @@ public class BancoTeste {
 		conta4.aplicarJuros();
 		
 		System.out.println("Juros de saldo negativo aplicados no saldo: " +  conta4.verificarSaldo());
+		
+		
+		System.out.println("\n \\\\\\\\\\\\\\  Banco \\\\\\\\\\\\\\\\  \n");
+		
+		System.out.println(banco.totalContas());
+		System.out.println(banco.totalDinheiro());
 	}
 
 }

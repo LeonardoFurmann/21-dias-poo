@@ -2,6 +2,7 @@ package exe2;
 
 
 import java.util.Hashtable;
+import java.util.Map;
 //import java.util.List;
 
 public class Banco {
@@ -18,11 +19,13 @@ public class Banco {
 		
 		int valor = 0;
 		
-		for (int i = 0; i < tabela.size(); i++) {
+		for (Map.Entry<String, Object> entry : tabela.entrySet()) {
 			
-			Conta conta = (Conta) tabela.elements();
+			Conta conta = (Conta) entry.getValue();			
 			
+			System.out.println(conta.getSaldo());
 			valor += conta.getSaldo();
+			System.out.println(valor);
 		}
 			
 		return valor;
@@ -45,6 +48,8 @@ public class Banco {
 	public double saldo(String nome) {
 		
 		Conta conta = (Conta) tabela.get(nome);
+		
+		
 		
 		return conta.getSaldo();
 		
