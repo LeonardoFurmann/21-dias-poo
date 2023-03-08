@@ -23,9 +23,8 @@ public class Banco {
 			
 			Conta conta = (Conta) entry.getValue();			
 			
-			System.out.println(conta.getSaldo());
 			valor += conta.getSaldo();
-			System.out.println(valor);
+			
 		}
 			
 		return valor;
