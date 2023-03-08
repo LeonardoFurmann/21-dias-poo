@@ -1,10 +1,10 @@
+package exe4;
 
 public interface IStack {
 	
-	public boolean empty();
-	public boo lean empty() ; 
+	public boolean empty() ; 
 	public Object peek(); 
 	public Object pop (); 
-	public Object push( Obj ect item ) ; 
+	public Object push( Object item ) ; 
 	public int search( Object o ) ; 
 }
