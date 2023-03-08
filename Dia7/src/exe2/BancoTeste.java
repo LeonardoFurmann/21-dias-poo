@@ -17,13 +17,13 @@ public class BancoTeste {
 		conta1.adicionarJuros();
 		
 		System.out.println("Saldo com juros adicionados na conta: " + banco.saldo("Conta1"));
-		System.out.println("Saldo com juros adicionados na conta: " + conta1.getSaldo());
 		
 		
 		
 		System.out.println("\n  \\\\\\\\\\\\\\\\ Vencimento Programado \\\\\\\\\\\\\\\\ \n");
 		
 		ContaVencimentoProgramado conta2 = new ContaVencimentoProgramado(0.05, 0.05, 1000);
+		
 		
 		banco.addConta("Conta2", conta2);
 		
@@ -44,6 +44,8 @@ public class BancoTeste {
 		System.out.println("\n \\\\\\\\\\\\\\  Cheque \\\\\\\\\\\\\\\\  \n");
 		
 		ContaComCheque conta3 = new ContaComCheque(3, 1, 1000);
+		
+		banco.addConta("Conta3", conta3);
 		
 		System.out.println("Saque: " + conta3.sacarFundos(100));
 		System.out.println("Saque: " + conta3.sacarFundos(100));
@@ -74,8 +76,8 @@ public class BancoTeste {
 		
 		System.out.println("\n \\\\\\\\\\\\\\  Banco \\\\\\\\\\\\\\\\  \n");
 		
-		System.out.println(banco.totalContas());
-		System.out.println(banco.totalDinheiro());
+		System.out.println("Total de contas: " + banco.totalContas());
+		System.out.println("Total dinheiro: " + banco.totalDinheiro());
 	}
 
 }
