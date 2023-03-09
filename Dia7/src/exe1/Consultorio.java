@@ -6,12 +6,13 @@ public class Consultorio {
 
 		PsychiatristObject psicologo = new PsychiatristObject();
 		
-		HappyObject feliz = new  HappyObject();
-		
+		HappyObject feliz = new  HappyObject();	
 		SadObject triste = new SadObject();
+		CarefreeObject despreocupado = new CarefreeObject();
 		
 		psicologo.examine(triste);
 		psicologo.examine(feliz);
+		psicologo.examine(despreocupado);
 		
 		psicologo.observe(feliz);
 		psicologo.observe(triste);

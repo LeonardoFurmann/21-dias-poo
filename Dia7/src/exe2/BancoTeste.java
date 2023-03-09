@@ -74,6 +74,17 @@ public class BancoTeste {
 		System.out.println("Juros de saldo negativo aplicados no saldo: " +  conta4.verificarSaldo());
 		
 		
+		System.out.println("\n \\\\\\\\\\\\\\  Conta Recompensa \\\\\\\\\\\\\\\\  \n");
+		
+		ContaRecompensas conta5 = new ContaRecompensas(0.05, 100, 500);
+		
+		conta5.depositarFundos(3000);
+		System.out.println("Pontos de recompensa: " + conta5.getPontosRecompensa());
+		
+		conta5.depositarFundos(3000);
+		System.out.println("Pontos de recompensa: " + conta5.getPontosRecompensa());
+		
+		
 		System.out.println("\n \\\\\\\\\\\\\\  Banco \\\\\\\\\\\\\\\\  \n");
 		
 		System.out.println("Total de contas: " + banco.totalContas());
