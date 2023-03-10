@@ -1,6 +1,10 @@
 package exe1;
 
+import java.util.Scanner;
+
 public class Consultorio {
+	
+	Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
@@ -16,6 +20,7 @@ public class Consultorio {
 		
 		psicologo.observe(feliz);
 		psicologo.observe(triste);
+		
 
 	}
 
