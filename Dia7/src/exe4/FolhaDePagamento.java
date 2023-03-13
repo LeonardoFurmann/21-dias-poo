@@ -19,7 +19,7 @@ public class FolhaDePagamento {
 		for (int i = 0; i < funcionarios.length; i++) {
 			Funcionario funcionario = funcionarios[i];
 			
-			System.out.println(funcionario.calcularBonus());
+			System.out.println("Pagar bonus para " + funcionario.getUltimoNome() + ", " + funcionario.getPrimeiroNome() + " $" +funcionario.calcularBonus());
 		}
 	}
 	
