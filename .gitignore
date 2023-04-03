@@ -24,3 +24,7 @@ hs_err_pid*
 replay_pid*
 /.metadata/
 Dia 3/.settings/org.eclipse.jdt.core.prefs
+.idea/21-dias-poo.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
