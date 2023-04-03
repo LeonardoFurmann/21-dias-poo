@@ -1,0 +1,10 @@
+package Exe1;
+
+public interface Iterator {
+	
+	public void first();
+	public void next();
+	public boolean isDone();
+	public Object currentItem();
+
+}
