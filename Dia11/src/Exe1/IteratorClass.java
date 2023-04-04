@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class IteratorClass implements Iterator {
 	
 	private Object [] itens;
-	private int index;
+	private int index = 0;
 	
 	
 	public IteratorClass(LinkedList<Item> itens) {
@@ -21,27 +21,36 @@ public class IteratorClass implements Iterator {
 
 	@Override
 	public void next() {
-		if(!isDone()) {
-			index++;
-		}
+		index++;
 		
 	}
 
 	@Override
 	public boolean isDone() {
+		return index >= itens.length;
 		
-		if(index == itens.length) {
-			return true;
-		}	
-		return false;
 	}
 
 	@Override
-	public Object currentItem() {
-		if(!isDone()) {
-			return itens[index];
-		}		
-		return null;
+	public Object currentItem() {	
+		return itens[index];			
+		
+	}
+
+	public int getItens() {
+		return itens.length;
+	}
+
+	public void setItens(Object[] itens) {
+		this.itens = itens;
+	}
+
+	public int getIndex() {
+		return index;
+	}
+
+	public void setIndex(int index) {
+		this.index = index;
 	}
 
 }

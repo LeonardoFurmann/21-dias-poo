@@ -7,10 +7,17 @@ public class Teste {
 		Carrinho carrinho = new Carrinho();
 		
 		carrinho.addItem(new Item(1, 4, 5, "Coca-Cola", 0));
+		carrinho.addItem(new Item(1, 4, 5, "Coca-Cola", 0));
 		
-		carrinho.iterator();
+		carrinho.addItem(new Item(1, 4, 5, "Coca-Cola", 0));
+		carrinho.addItem(new Item(1, 4, 5, "Coca-Cola", 0));
+		carrinho.addItem(new Item(1, 4, 5, "Coca-Cola", 0));
 		
-		System.out.println(carrinho.getItem(0).getDescricao());
+		Iterator iterator = carrinho.iterator();
+		
+		carrinho.descreverItens(iterator);
+		
+		
 		
 		
 		
