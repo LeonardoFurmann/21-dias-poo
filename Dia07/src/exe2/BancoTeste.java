@@ -4,7 +4,7 @@ public class BancoTeste {
 
 	public static void main(String[] args) {
 		
-		Banco banco = new Banco();
+		Banco banco = Banco.getInstancia();
 		
 		System.out.println(" \n \\\\\\\\\\\\\\\\  Poupança \\\\\\\\\\\\  \n"  );
 		

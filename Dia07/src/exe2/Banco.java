@@ -8,7 +8,20 @@ import java.util.Map;
 public class Banco {
 	
 	Hashtable<String, Object> tabela = new Hashtable<>();
-	//private List<Conta> contas;
+	
+		// instancia de banco Singleton
+	private static Banco instanciaBanco;
+	
+		// construtor protegido para não haver instancias de banco indesejadas
+	protected Banco(){}
+	
+		// funçaõ que retorna a instancia de banco
+	public static Banco getInstancia() {
+		if(instanciaBanco == null) {
+			instanciaBanco = new Banco();
+		}
+		return instanciaBanco;
+	}
 	
 	public void addConta(String nome, Conta conta) {
 		
