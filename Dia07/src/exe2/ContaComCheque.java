@@ -13,9 +13,11 @@ public class ContaComCheque extends Conta{
 		setTaxaPorTransação(taxa);
 	}
 	
-	
-	
-	
+	public ContaComCheque() {
+		super();
+	}
+
+
 	public int getLimiteTransações() {
 		return limiteTransações;
 	}

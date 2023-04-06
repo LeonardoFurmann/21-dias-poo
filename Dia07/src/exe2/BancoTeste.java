@@ -1,5 +1,8 @@
 package exe2;
 
+import exe2Factory.ContaFactoryAbstrata;
+import exe2Factory.ContaFactoryConcreta;
+
 public class BancoTeste {
 
 	public static void main(String[] args) {
@@ -8,8 +11,10 @@ public class BancoTeste {
 		
 		System.out.println(" \n \\\\\\\\\\\\\\\\  Poupança \\\\\\\\\\\\  \n"  );
 		
-		ContaPoupança conta1 = new ContaPoupança(0.05, 700);
-		
+	
+		ContaFactoryConcreta conta = null;
+		ContaPoupança conta1 = conta.criarContaPoupança(0, 0);
+			
 		banco.addConta("Conta1", conta1 );
 		
 		System.out.println("Saldo na conta: " + banco.saldo("Conta1"));

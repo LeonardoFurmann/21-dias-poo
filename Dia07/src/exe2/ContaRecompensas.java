@@ -11,6 +11,12 @@ public class ContaRecompensas extends ContaPoupança{
 		setNivelDeposito(nivelDeposito);
 	}
 	
+	
+	public ContaRecompensas() {
+		super();
+	}
+
+
 	public int getPontosRecompensa() {
 		return pontosRecompensa;
 	}

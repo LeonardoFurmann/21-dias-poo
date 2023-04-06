@@ -16,6 +16,12 @@ public class ContaVencimentoProgramado extends ContaPoupança {
 
 	
 	
+	public ContaVencimentoProgramado() {
+		super();
+	}
+
+
+
 	public boolean isPrazoVencido() {
 		return prazo;
 	}

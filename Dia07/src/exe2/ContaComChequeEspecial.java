@@ -10,10 +10,16 @@ public class ContaComChequeEspecial extends Conta{
 		this.juros = juros;
 	}
 	
+	public ContaComChequeEspecial() {
+		super();
+	}
+
+	
 	
 	public double getJuros() {
 		return juros;
 	}
+
 
 	public void setJuros(int juros) {
 		this.juros = juros;

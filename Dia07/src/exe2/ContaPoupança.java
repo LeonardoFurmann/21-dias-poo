@@ -10,6 +10,13 @@ public class ContaPoupança extends Conta{
 		setJuros(juros);
 	}
 	
+	
+
+	public ContaPoupança() {
+		super();
+	}
+
+
 
 	public double getJuros() {
 		return juros;
