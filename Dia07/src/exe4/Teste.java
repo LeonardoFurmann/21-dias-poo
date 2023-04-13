@@ -33,6 +33,15 @@ public class Teste {
 		folhaDePagamento.relatorio();
 		
 		folhaDePagamento.calculaBonus(funcionarios);
+	
+		
+		FuncionarioHorarioTeste test = new FuncionarioHorarioTeste("Teste") {
+			public void runTest() {
+				test_CalculaPagamento();
+			}
+		};
+	
+		test.run();
 
 	}
 

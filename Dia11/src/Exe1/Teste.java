@@ -15,7 +15,7 @@ public class Teste {
 		
 		Iterator iterator = carrinho.iterator();
 		
-		carrinho.descreverItens(iterator);
+		//carrinho.descreverItens(iterator);
 		
 		
 		

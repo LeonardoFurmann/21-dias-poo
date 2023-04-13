@@ -16,38 +16,20 @@ public class Item {
 		this.desconto = desconto;
 	}
 	
-	public int getId() {
-		return id;
-	}
-	
-	public int getQuant() {
-		return quant;
-	}
-	public void setQuant(int quant) {
-		this.quant = quant;
-	}
-	
-	public float getPreco_uni() {
-		return preco_uni;
-	}
 	
 	public float getPrecoTotal() {
 		return (preco_uni * quant) - (desconto * quant);
 	}
 	
-	public String getDescricao() {
-		return descricao;
+	public void display(ItemDisplayFormatter format) {
+		format.qunatidade(quant);
+		format.id(id);
+		format.preco_uni(preco_uni);
+		format.desconto(desconto);
+		format.descricao(descricao);
+		format.precoAjustado(getPrecoTotal());
 	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-	public float getDesconto() {
-		return desconto;
-	}
-	public void setDesconto(float desconto) {
-		this.desconto = desconto;
-	}
-	
+
 	
 	
 }
